@@ -56,10 +56,10 @@ int main(int argc, char *argv[]) {
         //get best of 100 samples
         std::tie(encMicroS, decMicroS) = encoder_roundtrip(100, in_data);
         //calculate throughput
-        float dataInMb = static_cast<float>(value_count*sizeof(int64_t))/1'000'000;
+        float dataInMb = static_cast<float>(value_count*sizeof(int32_t))/1'000'000;
         // byte / µs = byte / (s/10⁶) = byte * 10⁶ / s = MB / s
-        float encMbS = static_cast<float>(value_count*sizeof(int64_t))/encMicroS;
-        float decMbS = static_cast<float>(value_count*sizeof(int64_t))/decMicroS;
+        float encMbS = static_cast<float>(value_count*sizeof(int32_t))/encMicroS;
+        float decMbS = static_cast<float>(value_count*sizeof(int32_t))/decMicroS;
 
         encodeResult.push_back(encMbS);
         decodeResult.push_back(decMbS);
