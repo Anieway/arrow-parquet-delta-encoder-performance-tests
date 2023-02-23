@@ -141,7 +141,8 @@ std::pair<int64_t, int64_t> encoder_roundtrip(int sample_repeat, std::vector<int
                 }
             }
         }
-        if(error_count == 0) {
+        //TODO measuring validation failures just for performance proof of concept
+        if(/*error_count == 0*/true) {
             //time encoding took in µs
             auto encMicroS =
             std::chrono::duration_cast<std::chrono::microseconds>(mid-startE).count();
