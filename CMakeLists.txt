@@ -26,6 +26,9 @@ target_link_libraries(EncoderThroughput EncoderRoundtrip)
 add_executable( EncoderRandThroughput src/EncoderRandThroughput.cpp )
 target_link_libraries(EncoderRandThroughput EncoderRoundtrip)
 
+add_executable( VectorEncoderRandThroughput src/VectorEncoderRandThroughput.cpp )
+target_link_libraries(VectorEncoderRandThroughput EncoderRoundtrip)
+
 add_executable( EncoderTestFromFile src/EncoderTestFromParquetData.cpp )
 target_link_libraries(EncoderTestFromFile EncoderRoundtrip)
 
