@@ -18,3 +18,13 @@ std::pair<int64_t, int64_t> encoder_roundtrip(int sample_repeat, std::vector<int
  * @return A std::pair of encoding time and decoding time as int64_t in µs
  */
 std::pair<int64_t, int64_t> encoder_roundtrip(int sample_repeat, std::vector<int32_t> &in_data);
+
+/**
+ * @brief Executes a set amout of parquet-encoder(DELTA_BINARY_PACKED encoding) roundtrips with the given data
+ *        and returns the best measurement pair (sorted by encoding time) in µs
+ * 
+ * @param sample_repeat the number of 
+ * @param in_data An int64_t vector containing the data to be used for the round trips
+ * @return std::pair<int64_t, int64_t> a pair of (encode time, decode time) in µs
+ */
+std::pair<int64_t, int64_t> encoder_detailed_roundtrip(int sample_repeat, std::vector<int64_t> &in_data)
