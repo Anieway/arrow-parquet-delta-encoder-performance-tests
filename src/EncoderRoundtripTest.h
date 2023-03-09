@@ -27,4 +27,4 @@ std::pair<int64_t, int64_t> encoder_roundtrip(int sample_repeat, std::vector<int
  * @param in_data An int64_t vector containing the data to be used for the round trips
  * @return std::pair<int64_t, int64_t> a pair of (encode time, decode time) in µs
  */
-std::pair<int64_t, int64_t> encoder_detailed_roundtrip(int sample_repeat, std::vector<int64_t> &in_data)
+std::pair<int64_t, int64_t> encoder_detailed_roundtrip(int sample_repeat, std::vector<int64_t> &in_data);
